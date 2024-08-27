@@ -3,7 +3,17 @@ import IconCopy from "./icons/IconCopy.vue";
 
 import { defineProps } from "vue";
 
-defineProps({ password: { type: String, required: true } });
+const props = defineProps({ password: { type: String, required: true } });
+
+const onClick = (event) => {
+  event.preventDefault();
+  const copiedEl = event.currentTarget.nextSibling;
+  copiedEl.classList.add("visible");
+  setTimeout(() => {
+    copiedEl.classList.remove("visible");
+  }, 2000);
+  navigator.clipboard.writeText(props.password);
+};
 </script>
 
 <template>
@@ -15,7 +25,8 @@ defineProps({ password: { type: String, required: true } });
       id="passwordDisplay"
       :value="password"
     />
-    <a href=""><IconCopy /></a>
+    <a @click="onClick"><IconCopy /></a>
+    <span class="copied">COPIED</span>
   </div>
 </template>
 
@@ -43,6 +54,18 @@ div {
     position: absolute;
     right: 1rem;
     bottom: calc(50% - 1rem);
+  }
+
+  .copied {
+    display: none;
+    position: absolute;
+    color: $color-neon-green;
+    right: 3rem;
+    bottom: calc(50% - 0.75rem);
+  }
+
+  .visible {
+    display: inline-block;
   }
 }
 </style>
