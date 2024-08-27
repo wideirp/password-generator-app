@@ -1,6 +1,13 @@
 @use "./_variables.scss" as *;
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   min-height: 100vh;
   background: $color-very-dark-grey;
+  font-family: "JetBrains Mono", monospace;
 }
