@@ -1,0 +1,35 @@
+$color-very-dark-grey: #18171f;
+$color-dark-grey: #24232c;
+$color-grey: #817d92;
+$color-almost-white: #e6e5ea;
+
+$color-neon-green: #a4ffaf;
+$color-red: #f64a4a;
+$color-orange: #fb7c58;
+$color-yellow: #f8cd65;
+
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
+
+@mixin font-heading-l($color) {
+  font-family: "JetBrains Mono", monospace;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  color: $color;
+}
+
+@mixin font-heading-m($color) {
+  font-family: "JetBrains Mono", monospace;
+  font-weight: 700;
+  font-size: clamp(1rem, calc(1rem + 1vw), 1.5rem);
+  line-height: 2rem;
+  color: $color;
+}
+
+@mixin font-body($color) {
+  font-family: "JetBrains Mono", monospace;
+  font-weight: 700;
+  font-size: 1.1rem;
+  line-height: 1.5rem;
+  color: $color;
+}
