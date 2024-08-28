@@ -1,6 +1,7 @@
 <script setup>
 import PasswordDisplay from "./components/PasswordDisplay.vue";
 import InteractiveSlider from "./components/InteractiveSlider.vue";
+import OptionCheckbox from "./components/OptionCheckbox.vue";
 </script>
 
 <template>
@@ -9,6 +10,7 @@ import InteractiveSlider from "./components/InteractiveSlider.vue";
     <PasswordDisplay password="678asdf687a@/." />
     <section>
       <InteractiveSlider />
+      <OptionCheckbox />
     </section>
   </main>
 </template>
@@ -30,5 +32,6 @@ h1 {
 section {
   background: $color-dark-grey;
   margin-top: 1rem;
+  padding: 1rem;
 }
 </style>
