@@ -4,7 +4,7 @@ import PasswordDisplay from "./components/PasswordDisplay.vue";
 import InteractiveSlider from "./components/InteractiveSlider.vue";
 import OptionCheckbox from "./components/OptionCheckbox.vue";
 import IconArrow from "./components/icons/IconArrow.vue";
-import PasswordGenerator from "./passwordGenerator";
+import PasswordGenerator from "./PasswordGenerator";
 
 const passGen = new PasswordGenerator();
 const pass = ref("");
