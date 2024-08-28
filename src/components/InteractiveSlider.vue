@@ -1,7 +1,5 @@
 <script setup>
-import { ref } from "vue";
-
-const characterLength = ref("10");
+import { store } from "@/store";
 </script>
 
 <template>
@@ -14,9 +12,9 @@ const characterLength = ref("10");
       min="6"
       max="16"
       step="1"
-      v-model="characterLength"
+      v-model="store.characterLength"
     />
-    <span class="count">{{ characterLength }}</span>
+    <span class="count">{{ store.characterLength }}</span>
   </fieldset>
 </template>
 
