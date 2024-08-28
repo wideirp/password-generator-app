@@ -1,7 +1,6 @@
 <script setup>
 import IconCopy from "./icons/IconCopy.vue";
-
-const props = defineProps({ password: { type: String, required: true } });
+import { store } from "@/store";
 
 const onClick = (event) => {
   const copiedEl = event.currentTarget.nextSibling;
@@ -9,7 +8,7 @@ const onClick = (event) => {
   setTimeout(() => {
     copiedEl.classList.remove("visible");
   }, 2000);
-  navigator.clipboard.writeText(props.password);
+  navigator.clipboard.writeText(store.password);
 };
 </script>
 
@@ -20,7 +19,7 @@ const onClick = (event) => {
       disabled
       placeholder="P4$5W0rD!"
       id="passwordDisplay"
-      :value="password"
+      :value="store.password"
     />
     <a @click.prevent="onClick"><IconCopy /></a>
     <span class="copied">COPIED</span>
