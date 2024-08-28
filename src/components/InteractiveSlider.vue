@@ -26,7 +26,7 @@ const characterLength = ref("10");
 fieldset {
   border: none;
   margin: 0;
-  padding: 1rem;
+  padding: 0;
   position: relative;
 
   label {
@@ -43,7 +43,6 @@ fieldset {
     position: absolute;
     top: 0;
     right: 0;
-    padding: 1rem;
     color: $color-neon-green;
     @include font-heading-m();
   }
