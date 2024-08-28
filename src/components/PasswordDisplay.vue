@@ -1,12 +1,9 @@
 <script setup>
 import IconCopy from "./icons/IconCopy.vue";
 
-import { defineProps } from "vue";
-
 const props = defineProps({ password: { type: String, required: true } });
 
 const onClick = (event) => {
-  event.preventDefault();
   const copiedEl = event.currentTarget.nextSibling;
   copiedEl.classList.add("visible");
   setTimeout(() => {
@@ -25,7 +22,7 @@ const onClick = (event) => {
       id="passwordDisplay"
       :value="password"
     />
-    <a @click="onClick"><IconCopy /></a>
+    <a @click.prevent="onClick"><IconCopy /></a>
     <span class="copied">COPIED</span>
   </div>
 </template>
