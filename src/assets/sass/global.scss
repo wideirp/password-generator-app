@@ -11,3 +11,23 @@ body {
   background: $color-very-dark-grey;
   font-family: "JetBrains Mono", monospace;
 }
+
+.btn {
+  background: $color-neon-green;
+  color: $color-dark-grey;
+  text-transform: uppercase;
+  width: 100%;
+  padding: 1rem;
+  & path {
+    fill: $color-dark-grey;
+  }
+
+  &:hover {
+    border: 1px solid $color-neon-green;
+    color: $color-neon-green;
+    background: $color-dark-grey;
+    & path {
+      fill: $color-neon-green;
+    }
+  }
+}
