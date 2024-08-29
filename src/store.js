@@ -2,9 +2,9 @@ import { reactive } from "vue";
 
 export const store = reactive({
   password: "",
-  characterLength: 10,
-  includeUpper: true,
-  includeLower: true,
-  includeNumbers: true,
-  includeSymbols: true,
+  characterLength: 0,
+  includeUpper: false,
+  includeLower: false,
+  includeNumbers: false,
+  includeSymbols: false,
 });
