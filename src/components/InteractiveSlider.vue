@@ -12,7 +12,7 @@ import { store } from "@/store";
       min="6"
       max="16"
       step="1"
-      :value="store.characterLength"
+      v-model="store.characterLength"
     />
     <span class="count">{{ store.characterLength }}</span>
   </fieldset>
