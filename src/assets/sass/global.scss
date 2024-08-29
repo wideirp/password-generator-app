@@ -14,6 +14,8 @@ body {
 
 .btn {
   background: $color-neon-green;
+  border: 1px solid $color-neon-green;
+  outline: none;
   color: $color-dark-grey;
   text-transform: uppercase;
   width: 100%;
@@ -22,12 +24,17 @@ body {
     fill: $color-dark-grey;
   }
 
-  &:hover {
-    border: 1px solid $color-neon-green;
-    color: $color-neon-green;
-    background: $color-dark-grey;
-    & path {
-      fill: $color-neon-green;
+  @media (hover: hover) {
+    &:hover {
+      color: $color-neon-green;
+      background: $color-dark-grey;
+      & path {
+        fill: $color-neon-green;
+      }
+    }
+
+    &:active {
+      transform: scale(0.98);
     }
   }
 }
