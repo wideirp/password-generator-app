@@ -31,10 +31,31 @@ div {
   flex-direction: row-reverse;
   justify-content: flex-end;
   gap: 1rem;
-  color: $color-almost-white;
-  input {
-    border: none;
+  margin: 1rem 0;
+
+  input[type="checkbox"] {
+    appearance: none;
     outline: none;
+    width: 1.25rem;
+    height: 1.25rem;
+    border: 2px solid $color-almost-white;
+    background-color: $color-dark-grey;
+
+    &:checked {
+      border-color: $color-neon-green;
+      background-color: $color-neon-green;
+      background-image: url("/icon-check.svg");
+      background-size: cover;
+    }
+
+    &:hover {
+      @media (hover: hover) {
+        transform: scale(1.05);
+        &:not(:checked) {
+          border-color: $color-neon-green;
+        }
+      }
+    }
   }
 }
 </style>
