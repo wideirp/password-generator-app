@@ -45,6 +45,7 @@ fieldset {
     font-size: 1.5rem;
     background: transparent;
     overflow: hidden;
+    margin-top: 0.75rem;
 
     &,
     &::-webkit-slider-runnable-track,
