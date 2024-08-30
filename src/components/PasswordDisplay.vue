@@ -1,3 +1,5 @@
+<!-- TODO: make clicking anywhere in display copy password -->
+
 <script setup>
 import IconCopy from "./icons/IconCopy.vue";
 import { store } from "@/store";

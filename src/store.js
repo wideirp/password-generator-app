@@ -7,4 +7,5 @@ export const store = reactive({
   includeLower: false,
   includeNumbers: false,
   includeSymbols: false,
+  strength: "",
 });

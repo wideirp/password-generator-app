@@ -2,6 +2,7 @@
 import PasswordDisplay from "./components/PasswordDisplay.vue";
 import InteractiveSlider from "./components/InteractiveSlider.vue";
 import OptionCheckbox from "./components/OptionCheckbox.vue";
+import PasswordStrength from "./components/PasswordStrength.vue";
 import IconArrow from "./components/icons/IconArrow.vue";
 import PasswordGenerator from "./PasswordGenerator";
 import { store } from "./store";
@@ -46,6 +47,7 @@ function onClick() {
         text="Include Symbols"
         v-model="store.includeSymbols"
       />
+      <PasswordStrength />
       <button class="btn" @click.prevent="onClick">
         Generate <IconArrow />
       </button>
