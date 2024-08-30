@@ -42,7 +42,7 @@ const onClick = (event) => {
     border: none;
     padding: 1rem;
     box-sizing: border-box;
-    @media screen and (min-width: 30rem) {
+    @media screen and (min-width: 25rem) {
       @include font-heading-l();
     }
   }
