@@ -1,3 +1,5 @@
+import { Strengths } from "./store";
+
 export default class PasswordGenerator {
   constructor() {
     this.lowerLetters = "abcdefghijklmnopqrstuvwxyz";
@@ -15,6 +17,21 @@ export default class PasswordGenerator {
     return chars.join("");
   };
 
+  getStrength = function (charLen, lower, upper, nums, symbols) {
+    if ((!lower && !upper && !nums && !symbols) || charLen <= 0) {
+      return Strengths.NONE;
+    }
+    let strength = Strengths.TOOWEAK;
+    if (lower && upper && nums && symbols && charLen >= 8) {
+      strength = Strengths.STRONG;
+    } else if ((lower || upper) && symbols && charLen >= 6) {
+      strength = Strengths.MEDIUM;
+    } else if ((lower || upper) && !symbols && charLen >= 6) {
+      strength = Strengths.WEAK;
+    }
+    return strength;
+  };
+
   generatePassword = function (charLen, lower, upper, nums, symbols) {
     let charList = "";
     charList += lower ? this.lowerLetters : "";
@@ -23,6 +40,9 @@ export default class PasswordGenerator {
     charList += symbols ? this.symbols : "";
 
     const shuffledString = this.shuffleString(charList);
-    return shuffledString.slice(0, charLen);
+    const newPassword = shuffledString.slice(0, charLen);
+
+    const strength = this.getStrength(charLen, lower, upper, nums, symbols);
+    return [newPassword, strength];
   };
 }

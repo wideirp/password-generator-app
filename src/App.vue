@@ -10,7 +10,7 @@ import { store } from "./store";
 const passGen = new PasswordGenerator();
 
 function onClick() {
-  const newPass = passGen.generatePassword(
+  const [newPass, strength] = passGen.generatePassword(
     store.characterLength,
     store.includeLower,
     store.includeUpper,
@@ -18,6 +18,7 @@ function onClick() {
     store.includeSymbols
   );
   store.password = newPass;
+  store.strength = strength;
 }
 </script>
 

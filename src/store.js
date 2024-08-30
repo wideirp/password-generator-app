@@ -15,4 +15,5 @@ export const Strengths = Object.freeze({
   WEAK: Symbol("weak"),
   MEDIUM: Symbol("medium"),
   STRONG: Symbol("strong"),
+  NONE: Symbol(""),
 });

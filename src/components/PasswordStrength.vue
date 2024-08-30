@@ -6,7 +6,7 @@ import { store, Strengths } from "@/store";
   <section class="comp">
     <span>Strength</span>
     <div class="indicator">
-      <h4 class="strength-text">{{ store.strength }}</h4>
+      <h4 class="strength-text">{{ store.strength.description }}</h4>
       <div class="boxes">
         <div
           class="box"
