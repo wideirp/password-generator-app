@@ -1,11 +1,9 @@
-<!-- TODO: make clicking anywhere in display copy password -->
-
 <script setup>
 import IconCopy from "./icons/IconCopy.vue";
 import { store } from "@/store";
 
 const onClick = (event) => {
-  const copiedEl = event.currentTarget.nextSibling;
+  const copiedEl = event.target.previousSibling;
   copiedEl.classList.add("visible");
   setTimeout(() => {
     copiedEl.classList.remove("visible");
@@ -15,7 +13,7 @@ const onClick = (event) => {
 </script>
 
 <template>
-  <div>
+  <div class="component">
     <input
       type="text"
       disabled
@@ -23,15 +21,16 @@ const onClick = (event) => {
       id="passwordDisplay"
       :value="store.password"
     />
-    <a @click.prevent="onClick"><IconCopy /></a>
+    <a><IconCopy /></a>
     <span class="copied">COPIED</span>
+    <div class="click-container" @click.prevent="onClick"></div>
   </div>
 </template>
 
 <style scoped lang="scss">
 @use "../assets/sass/variables" as *;
 
-div {
+.component {
   position: relative;
 
   input {
@@ -64,6 +63,15 @@ div {
 
   .visible {
     display: inline-block;
+  }
+
+  .click-container {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: transparent;
+    top: 0;
+    left: 0;
   }
 }
 </style>

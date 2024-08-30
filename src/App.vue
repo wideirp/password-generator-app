@@ -25,7 +25,7 @@ function onClick() {
 <template>
   <main>
     <h1>Password Generator</h1>
-    <PasswordDisplay :password="store.password" />
+    <PasswordDisplay />
     <section>
       <InteractiveSlider />
       <OptionCheckbox
