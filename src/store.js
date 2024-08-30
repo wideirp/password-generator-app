@@ -9,3 +9,10 @@ export const store = reactive({
   includeSymbols: false,
   strength: "",
 });
+
+export const Strengths = Object.freeze({
+  TOOWEAK: Symbol("too weak!"),
+  WEAK: Symbol("weak"),
+  MEDIUM: Symbol("medium"),
+  STRONG: Symbol("strong"),
+});

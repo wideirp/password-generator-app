@@ -1,5 +1,5 @@
 <script setup>
-import { store } from "@/store";
+import { store, Strengths } from "@/store";
 </script>
 
 <template>
@@ -11,31 +11,31 @@ import { store } from "@/store";
         <div
           class="box"
           :class="{
-            red: store.strength === 'too weak!',
-            orange: store.strength === 'weak',
-            yellow: store.strength === 'medium',
-            green: store.strength === 'strong',
+            red: store.strength === Strengths.TOOWEAK,
+            orange: store.strength === Strengths.WEAK,
+            yellow: store.strength === Strengths.MEDIUM,
+            green: store.strength === Strengths.STRONG,
           }"
         ></div>
         <div
           class="box"
           :class="{
-            orange: store.strength === 'weak',
-            yellow: store.strength === 'medium',
-            green: store.strength === 'strong',
+            orange: store.strength === Strengths.WEAK,
+            yellow: store.strength === Strengths.MEDIUM,
+            green: store.strength === Strengths.STRONG,
           }"
         ></div>
         <div
           class="box"
           :class="{
-            yellow: store.strength === 'medium',
-            green: store.strength === 'strong',
+            yellow: store.strength === Strengths.MEDIUM,
+            green: store.strength === Strengths.STRONG,
           }"
         ></div>
         <div
           class="box"
           :class="{
-            green: store.strength === 'strong',
+            green: store.strength === Strengths.STRONG,
           }"
         ></div>
       </div>
