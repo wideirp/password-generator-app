@@ -60,14 +60,21 @@ function onClick() {
 @use "./assets/sass/variables" as *;
 
 main {
-  margin: auto 1rem;
   color: $color-almost-white;
+  @media screen and (min-width: 22rem) {
+    margin: 0 1rem;
+  }
+  @media screen and (min-width: 36rem) {
+    max-width: 540px;
+    margin: 0 auto;
+  }
 }
 
 h1 {
   @include font-heading-m();
   color: $color-grey;
   text-align: center;
+  width: 100%;
 }
 
 section {

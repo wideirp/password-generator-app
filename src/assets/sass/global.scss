@@ -10,6 +10,9 @@ body {
   min-height: 100vh;
   background: $color-very-dark-grey;
   font-family: "JetBrains Mono", monospace;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .btn {
