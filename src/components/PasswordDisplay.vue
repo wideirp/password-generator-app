@@ -5,8 +5,10 @@ import { store } from "@/store";
 const onClick = (event) => {
   const copiedEl = event.target.previousSibling;
   copiedEl.classList.add("visible");
+  event.target.style.display = "none";
   setTimeout(() => {
     copiedEl.classList.remove("visible");
+    event.target.style.display = "block";
   }, 2000);
   navigator.clipboard.writeText(store.password);
 };
