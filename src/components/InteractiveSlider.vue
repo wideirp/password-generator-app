@@ -92,10 +92,13 @@ fieldset {
           cursor: grabbing;
         }
       }
-    }
 
-    &:active {
-      cursor: grabbing;
+      &:active,
+      &:focus {
+        cursor: grabbing;
+        border-color: $color-neon-green;
+        background-color: $color-very-dark-grey;
+      }
     }
   }
 

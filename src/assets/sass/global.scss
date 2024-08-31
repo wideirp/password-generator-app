@@ -36,9 +36,11 @@ body {
         fill: $color-neon-green;
       }
     }
+  }
 
-    &:active {
-      transform: scale(0.98);
-    }
+  &:active {
+    transform: scale(0.98);
+    color: $color-neon-green;
+    background: $color-dark-grey;
   }
 }
