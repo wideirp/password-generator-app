@@ -9,7 +9,7 @@ import { store } from "@/store";
       type="range"
       name="slider"
       id="slider"
-      min="6"
+      min="0"
       max="16"
       step="1"
       v-model="store.characterLength"
