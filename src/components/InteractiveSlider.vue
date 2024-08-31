@@ -29,7 +29,8 @@ fieldset {
 
   label {
     display: block;
-    @include font-body();
+    font-size: 0.9rem;
+    font-weight: 400;
     line-height: 2rem;
   }
 
@@ -104,6 +105,7 @@ fieldset {
     right: 0;
     color: $color-neon-green;
     @include font-heading-m();
+    font-size: 1.5rem;
   }
 }
 </style>
